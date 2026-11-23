@@ -486,6 +486,22 @@
             gap: 8px;
         }
 
+        .service-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .service-gallery img {
+            width: 100%;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
         .service-list {
             list-style: none;
         }
@@ -740,6 +756,10 @@
                     <div class="category-title">
                         <i class="fa-solid fa-server"></i> IT-Netzwerkdienste
                     </div>
+                    <div class="service-gallery">
+                        <img src="network.PNG" alt="Netzwerk" onerror="this.style.display='none';">
+                        <img src="cabling.PNG" alt="Verkabelung" onerror="this.style.display='none';">
+                    </div>
                     <ul class="service-list">
                         <li><i class="fa-solid fa-check"></i> Netzwerkdesign und -planung</li>
                         <li><i class="fa-solid fa-check"></i> Hardwareinstallation und -konfiguration</li>
@@ -754,6 +774,9 @@
                     <div class="category-title">
                         <i class="fa-solid fa-video"></i> Videoüberwachung
                     </div>
+                    <div class="service-gallery">
+                        <img src="cctv.PNG" alt="Videoüberwachung" onerror="this.style.display='none';">
+                    </div>
                     <ul class="service-list">
                         <li><i class="fa-solid fa-check"></i> IP-Kameras und Videoüberwachung</li>
                         <li><i class="fa-solid fa-check"></i> DSGVO-konforme Einrichtung</li>
@@ -764,6 +787,11 @@
                 <div class="service-category full-width">
                     <div class="category-title">
                         <i class="fa-solid fa-toolbox"></i> Geschäftsunterstützung & Allgemeine Dienstleistungen
+                    </div>
+                    <div class="service-gallery">
+                        <img src="website.PNG" alt="Website und Marketing" onerror="this.style.display='none';">
+                        <img src="online.PNG" alt="Onlinehandel" onerror="this.style.display='none';">
+                        <img src="cleaning.PNG" alt="Gebäudereinigung und Service" onerror="this.style.display='none';">
                     </div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;">
                         <ul class="service-list">
