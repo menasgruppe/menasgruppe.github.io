@@ -213,6 +213,7 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .header-contact-item {
@@ -232,12 +233,6 @@
         .header-contact-item:hover {
             background: var(--accent-gold);
             color: var(--text-dark);
-        }
-
-        @media (max-width: 992px) {
-            .header-contacts {
-                display: none;
-            }
         }
 
         /* Hero Section */
@@ -562,7 +557,34 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pure-white);
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: 0.3s;
+        }
+
+        .footer-social-btn:hover {
+            background: var(--accent-gold);
+            color: var(--text-dark);
         }
     </style>
 </head>
@@ -576,7 +598,7 @@
         <header>
             <div class="brand-logo-container">
                 <div class="brand-logo-img">
-                    <img src="logo-menas.png" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="max-width:100%; max-height:100%;">
+                    <img src="menas logo.png" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="max-width:100%; max-height:100%;">
                     <i class="fa-solid fa-building" style="display:none; color: var(--accent-gold); font-size: 1.4rem;"></i>
                 </div>
                 <div class="brand-text">
@@ -606,6 +628,12 @@
                 <div id="google_translate_element"></div>
 
                 <div class="header-contacts">
+                    <a href="https://www.tiktok.com/@menas.gruppe" target="_blank" class="header-contact-item">
+                        <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://www.instagram.com/menasgruppe/" target="_blank" class="header-contact-item">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
                     <a href="https://wa.me/4915168684746" target="_blank" class="header-contact-item">
                         <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.1rem;"></i> WhatsApp
                     </a>
@@ -631,7 +659,7 @@
                 <div>
                     <div class="card-header">
                         <div class="card-logo">
-                            <img src="logo-menas.png" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="menas logo.png" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <i class="fa-solid fa-laptop" style="display:none; color: var(--pure-white); font-size: 1.8rem;"></i>
                         </div>
                         <div class="card-title-group">
@@ -652,7 +680,7 @@
                 <div>
                     <div class="card-header">
                         <div class="card-logo">
-                            <img src="logo-karachi.png" alt="MENA's Gastronomy Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="menas logo.png" alt="MENA's Gastronomy Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <i class="fa-solid fa-bowl-food" style="display:none; color: var(--accent-gold); font-size: 1.8rem;"></i>
                         </div>
                         <div class="card-title-group">
@@ -672,6 +700,14 @@
 
         <!-- Footer -->
         <footer>
+            <div class="footer-social-links">
+                <a href="https://www.tiktok.com/@menas.gruppe" target="_blank" class="footer-social-btn">
+                    <i class="fa-brands fa-tiktok"></i> TikTok: @menas.gruppe
+                </a>
+                <a href="https://www.instagram.com/menasgruppe/" target="_blank" class="footer-social-btn">
+                    <i class="fa-brands fa-instagram"></i> Instagram: menasgruppe
+                </a>
+            </div>
             <p>&copy; 2026 <strong>MENAS Gruppe</strong>. Alle Rechte vorbehalten.</p>
             <p style="font-size: 0.8rem; margin-top: 4px;">
                 Danziger Straße 21, 31737 Rinteln | E-Mail: menasgruppe@outlook.com | Tel: +49 151 68684746
