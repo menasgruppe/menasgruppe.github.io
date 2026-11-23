@@ -613,7 +613,7 @@
         <header>
             <div class="brand-logo-container">
                 <div class="brand-logo-img">
-                    <img src="menas logo.png" alt="MENAS Gruppe Logo" data-fallbacks="menas logo.jpg,menas logo.jpeg,menas logo.webp,menas-logo.png,logo-menas.png" onerror="handleLogoFallback(this)">
+                    <img src="Menas logo.jpg" alt="MENAS Gruppe Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <i class="fa-solid fa-building" style="display:none; color: var(--accent-gold); font-size: 1.4rem;"></i>
                 </div>
                 <div class="brand-text">
@@ -668,7 +668,7 @@
                 <div>
                     <div class="card-header">
                         <div class="card-logo">
-                            <img src="menas logo.png" alt="MENAS Logo" data-fallbacks="menas logo.jpg,menas logo.jpeg,menas logo.webp,menas-logo.png,logo-menas.png" onerror="handleLogoFallback(this)">
+                            <img src="Menas logo.jpg" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <i class="fa-solid fa-laptop" style="display:none; color: var(--pure-white); font-size: 1.8rem;"></i>
                         </div>
                         <div class="card-title-group">
@@ -689,7 +689,7 @@
                 <div>
                     <div class="card-header">
                         <div class="card-logo">
-                            <img src="menas logo.png" alt="MENA's Gastronomy Logo" data-fallbacks="menas logo.jpg,menas logo.jpeg,menas logo.webp,menas-logo.png,logo-menas.png" onerror="handleLogoFallback(this)">
+                            <img src="Menas logo.jpg" alt="MENA's Gastronomy Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <i class="fa-solid fa-bowl-food" style="display:none; color: var(--accent-gold); font-size: 1.8rem;"></i>
                         </div>
                         <div class="card-title-group">
@@ -916,22 +916,6 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
-        function handleLogoFallback(img) {
-            var listAttr = img.getAttribute('data-fallbacks');
-            var fallbacks = listAttr ? listAttr.split(',') : [];
-            var idx = parseInt(img.getAttribute('data-fb-index') || '0', 10);
-
-            if (idx < fallbacks.length) {
-                img.setAttribute('data-fb-index', String(idx + 1));
-                img.src = fallbacks[idx].trim();
-            } else {
-                img.style.display = 'none';
-                if (img.nextElementSibling) {
-                    img.nextElementSibling.style.display = 'block';
-                }
-            }
-        }
-
         function openModal(id) {
             document.getElementById(id).classList.add('active');
         }
