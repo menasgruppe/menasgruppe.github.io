@@ -95,15 +95,23 @@
         }
 
         .brand-logo-img {
-            width: 50px;
-            height: 50px;
+            width: 54px;
+            height: 54px;
             object-fit: contain;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.14);
             padding: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            overflow: hidden;
+        }
+
+        .brand-logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .brand-text h1 {
@@ -213,7 +221,6 @@
             display: flex;
             gap: 10px;
             align-items: center;
-            flex-wrap: wrap;
         }
 
         .header-contact-item {
@@ -233,6 +240,12 @@
         .header-contact-item:hover {
             background: var(--accent-gold);
             color: var(--text-dark);
+        }
+
+        @media (max-width: 992px) {
+            .header-contacts {
+                display: none;
+            }
         }
 
         /* Hero Section */
@@ -330,11 +343,12 @@
             padding: 6px;
             flex-shrink: 0;
             border: 1px solid rgba(255,255,255,0.2);
+            overflow: hidden;
         }
 
         .card-logo img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
@@ -560,31 +574,33 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        .footer-social-links {
+        .footer-social-icons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 14px;
         }
 
-        .footer-social-btn {
+        .footer-icon-only {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
             color: var(--pure-white);
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.15rem;
             transition: 0.3s;
         }
 
-        .footer-social-btn:hover {
+        .footer-icon-only:hover {
             background: var(--accent-gold);
             color: var(--text-dark);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -598,7 +614,7 @@
         <header>
             <div class="brand-logo-container">
                 <div class="brand-logo-img">
-                    <img src="menas logo.png" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="max-width:100%; max-height:100%;">
+                    <img src="menas logo.png" alt="MENAS Gruppe Logo" data-fallbacks="menas logo.jpg,menas logo.jpeg,menas logo.webp,menas-logo.png,logo-menas.png" onerror="handleLogoFallback(this)">
                     <i class="fa-solid fa-building" style="display:none; color: var(--accent-gold); font-size: 1.4rem;"></i>
                 </div>
                 <div class="brand-text">
@@ -628,12 +644,6 @@
                 <div id="google_translate_element"></div>
 
                 <div class="header-contacts">
-                    <a href="https://www.tiktok.com/@menas.gruppe" target="_blank" class="header-contact-item">
-                        <i class="fa-brands fa-tiktok"></i> TikTok
-                    </a>
-                    <a href="https://www.instagram.com/menasgruppe/" target="_blank" class="header-contact-item">
-                        <i class="fa-brands fa-instagram"></i> Instagram
-                    </a>
                     <a href="https://wa.me/4915168684746" target="_blank" class="header-contact-item">
                         <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.1rem;"></i> WhatsApp
                     </a>
@@ -659,7 +669,7 @@
                 <div>
                     <div class="card-header">
                         <div class="card-logo">
-                            <img src="menas logo.png" alt="MENAS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="menas logo.png" alt="MENAS Logo" data-fallbacks="menas logo.jpg,menas logo.jpeg,menas logo.webp,menas-logo.png,logo-menas.png" onerror="handleLogoFallback(this)">
                             <i class="fa-solid fa-laptop" style="display:none; color: var(--pure-white); font-size: 1.8rem;"></i>
                         </div>
                         <div class="card-title-group">
@@ -680,7 +690,7 @@
                 <div>
                     <div class="card-header">
                         <div class="card-logo">
-                            <img src="menas logo.png" alt="MENA's Gastronomy Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="menas logo.png" alt="MENA's Gastronomy Logo" data-fallbacks="menas logo.jpg,menas logo.jpeg,menas logo.webp,menas-logo.png,logo-menas.png" onerror="handleLogoFallback(this)">
                             <i class="fa-solid fa-bowl-food" style="display:none; color: var(--accent-gold); font-size: 1.8rem;"></i>
                         </div>
                         <div class="card-title-group">
@@ -700,12 +710,12 @@
 
         <!-- Footer -->
         <footer>
-            <div class="footer-social-links">
-                <a href="https://www.tiktok.com/@menas.gruppe" target="_blank" class="footer-social-btn">
-                    <i class="fa-brands fa-tiktok"></i> TikTok: @menas.gruppe
+            <div class="footer-social-icons">
+                <a href="https://www.tiktok.com/@menas.gruppe" target="_blank" rel="noopener noreferrer" class="footer-icon-only" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
                 </a>
-                <a href="https://www.instagram.com/menasgruppe/" target="_blank" class="footer-social-btn">
-                    <i class="fa-brands fa-instagram"></i> Instagram: menasgruppe
+                <a href="https://www.instagram.com/menasgruppe/" target="_blank" rel="noopener noreferrer" class="footer-icon-only" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
             <p>&copy; 2026 <strong>MENAS Gruppe</strong>. Alle Rechte vorbehalten.</p>
@@ -905,6 +915,22 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
+        function handleLogoFallback(img) {
+            var listAttr = img.getAttribute('data-fallbacks');
+            var fallbacks = listAttr ? listAttr.split(',') : [];
+            var idx = parseInt(img.getAttribute('data-fb-index') || '0', 10);
+
+            if (idx < fallbacks.length) {
+                img.setAttribute('data-fb-index', String(idx + 1));
+                img.src = fallbacks[idx].trim();
+            } else {
+                img.style.display = 'none';
+                if (img.nextElementSibling) {
+                    img.nextElementSibling.style.display = 'block';
+                }
+            }
+        }
+
         function openModal(id) {
             document.getElementById(id).classList.add('active');
         }
